@@ -55,20 +55,20 @@ const LoginForm = () => {
   return (
     <div>
       {loggedIn ? (
-        <p>Welcome, {username}!</p>
+        <p className='welcome'>Welcome, {username}!</p>
       ) : (
         <div>
           {/* Input for username */}
           <label>
             Username:
-            <input
+            < input
               type="text"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
           </label>
           {usernameError && <p style={{ color: 'red' }}>{usernameError}</p>}
-          <br/><br/>
+          <br/><br/><br/>
 
            {/* Input for email */}
           <label>
@@ -80,7 +80,7 @@ const LoginForm = () => {
             />
           </label>
           {emailError && <p style={{ color: 'red' }}>{emailError}</p>}
-          <br/><br/>
+          <br/><br/><br/>
           {/* Input for password */}
           <label>
             Password:   
@@ -91,9 +91,9 @@ const LoginForm = () => {
             />
           </label>
           {passwordError && <p style={{ color: 'red' }}>{passwordError}</p>}
-          <br/><br/>
+          <br/><br/><br/>
           {/* Button to trigger login */}
-          <button onClick={handleLogin}>Login</button>
+          <button className='btn'  onClick={handleLogin}>Login</button>
           {/* Displaying overall error message */}
           {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
